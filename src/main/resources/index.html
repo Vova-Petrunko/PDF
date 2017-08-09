@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="js/print.min.js"></script>
 </head>
 <body>
-<iframe id="fileframe" name="fileframe"></iframe>
-<button onclick="print();">Print</button>
-<script>
+<!--<iframe id="fileframe" name="fileframe"></iframe>-->
+<button type="button" onclick="printJS('barcode/barcode.pdf')">
+    Print PDF
+</button>
+<!--<script>
     function print() {
         var newWin = window.frames["fileframe"];
         newWin.document.write('<body onload="window.print()">dddd</body>');
@@ -17,6 +20,6 @@
         PDF.focus();
         PDF.contentWindow.print();
     }
-</script>
+</script>-->
 </body>
 </html>
