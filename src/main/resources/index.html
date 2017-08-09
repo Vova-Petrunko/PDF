@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<iframe id="fileframe" name="fileframe"></iframe>
+<button onclick="print();">Print</button>
+<script>
+    function print() {
+        var newWin = window.frames["fileframe"];
+        newWin.document.write('<body onload="window.print()">dddd</body>');
+        newWin.document.close();
+
+        var PDF = document.getElementById('fileframe');
+        PDF.focus();
+        PDF.contentWindow.print();
+    }
+</script>
+</body>
+</html>
